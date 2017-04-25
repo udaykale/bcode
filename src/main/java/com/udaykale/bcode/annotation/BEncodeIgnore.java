@@ -1,4 +1,4 @@
-package com.udaykale.custom;
+package com.udaykale.bcode.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * @author uday
  */
-@Retention(RetentionPolicy.SOURCE)
-@Target({ElementType.METHOD, ElementType.TYPE})
-public @interface PositiveTest {
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+public @interface BEncodeIgnore {
 }
