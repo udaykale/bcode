@@ -1,15 +1,15 @@
-package com.udaykale.bcode;
+package com.udaykale.bcode.core;
 
 /**
  * @author uday
  */
 public class BEncodeException extends RuntimeException {
 
-    BEncodeException(String message) {
+    public BEncodeException(String message) {
         super(message);
     }
 
-    BEncodeException(String message, Throwable cause) {
+    public BEncodeException(String message, Throwable cause) {
         super(message, cause);
     }
 }

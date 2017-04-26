@@ -1,4 +1,4 @@
-package com.udaykale.bcode;
+package com.udaykale.bcode.core;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -20,8 +20,8 @@ public interface BEncodeList extends BEncodeValue, List<BEncodeValue> {
         return (BEncodeList) BEncodeUtil.getBEncodeValue(get(i), BEncodeValueType.LIST);
     }
 
-    default BEncodeMap getBEncodeMap(int i) {
-        return (BEncodeMap) BEncodeUtil.getBEncodeValue(get(i), BEncodeValueType.DICTIONARY);
+    default BEncodeDictionary getBEncodeDictionary(int i) {
+        return (BEncodeDictionary) BEncodeUtil.getBEncodeValue(get(i), BEncodeValueType.DICTIONARY);
     }
 
     default int integerValue(int i) {

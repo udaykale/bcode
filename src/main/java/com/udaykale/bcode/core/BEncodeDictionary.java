@@ -1,4 +1,4 @@
-package com.udaykale.bcode;
+package com.udaykale.bcode.core;
 
 import java.math.BigInteger;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @author uday
  */
-public interface BEncodeMap extends BEncodeValue, Map<BEncodeString, BEncodeValue> {
+public interface BEncodeDictionary extends BEncodeValue, Map<BEncodeString, BEncodeValue> {
 
     default BEncodeInteger getBEncodeInteger(BEncodeString name) {
         return (BEncodeInteger) BEncodeUtil.getBEncodeValue(get(name), BEncodeValueType.INTEGER);
@@ -20,8 +20,8 @@ public interface BEncodeMap extends BEncodeValue, Map<BEncodeString, BEncodeValu
         return (BEncodeList) BEncodeUtil.getBEncodeValue(get(name), BEncodeValueType.LIST);
     }
 
-    default BEncodeMap getBEncodeMap(BEncodeString name) {
-        return (BEncodeMap) BEncodeUtil.getBEncodeValue(get(name), BEncodeValueType.DICTIONARY);
+    default BEncodeDictionary getBEncodeDictionary(BEncodeString name) {
+        return (BEncodeDictionary) BEncodeUtil.getBEncodeValue(get(name), BEncodeValueType.DICTIONARY);
     }
 
     default int integerValue(BEncodeString name) {

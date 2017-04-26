@@ -1,4 +1,4 @@
-package com.udaykale.bcode;
+package com.udaykale.bcode.core;
 
 import java.nio.charset.Charset;
 
